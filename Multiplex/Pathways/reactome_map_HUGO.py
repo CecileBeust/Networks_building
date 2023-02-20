@@ -20,7 +20,7 @@ import pandas as pd
 # Defined file paths
 mapping_file_path = "ID_mapping_HUGO_11_01_23.txt"
 reactome_file_path = "reactome.homo_sapiens.interactions.tab-delimited.txt"
-output_interaction_file = "reactome_mapped_HUGO_GENE_NAME_190123.tsv"
+output_interaction_file = "Pathways_reactome.tsv"
 
 def getMappingDict(filePath, convertFrom, convertTo):
 	df=pd.read_csv(filePath, sep="\t")

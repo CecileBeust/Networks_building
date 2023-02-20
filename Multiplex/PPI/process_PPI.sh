@@ -14,7 +14,7 @@ cut -f4,7 APID_level2_homo_sapiens_170123.txt >> PPI_LitBM_HiUnion_APID_not_clea
 sort PPI_LitBM_HiUnion_APID_not_cleaned.tsv | uniq > PPI_LitBM_HiUnion_APID_wo_dups.tsv
 
 # run utilities.py to remove rendundant interactions
-python3 utilities.py -i PPI_LitBM_HiUnion_APID_wo_dups.tsv -o PPI_HiUnion_LitBM_APID.tsv
+python3 utilities.py -i PPI_LitBM_HiUnion_APID_wo_dups.tsv -o PPI_LitBM_HiUnion_APID.tsv
 
 # Remove intermediate files
 # rm PPI_LitBM_HiUnion.tsv

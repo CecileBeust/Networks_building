@@ -36,17 +36,17 @@ def analyse_network(network: str):
 
 
 print("PPI")
-analyse_network("~/Multiplex/PPI/PPI_HiUnion_LitBM_APID_gene_names_190123.tsv")
+analyse_network("~/Multiplex/PPI/PPI_LitBM_HiUnion_APID.tsv")
 print(" ")
 print("Pathway")
-analyse_network("~/Multiplex/Pathways/reactome_pathways_gene_names_190123.tsv")
+analyse_network("~/Multiplex/Pathways/Pathways_reactome.tsv")
 print(" ")
 print("Complexes")
-analyse_network("~/Multiplex/Complexes/Complexes_gene_names_190123.tsv")
+analyse_network("~/Multiplex/Complexes/Complexes_ntw_gene_names.tsv")
 print(" ")
 print("CoExp")
-analyse_network("~/Multiplex/CoExpression/Coexpresssion_th05_020223_final.tsv")
+analyse_network("~/Multiplex/CoExpression/Coexpression_edges.txt")
 print(" ")
 print("Disease Involvement")
-analyse_network("~/Multiplex/DiseaseInvolvement/Gene_involved_in_diseases_layer_020223.tsv")
+analyse_network("~/Multiplex/DiseaseInvolvement/Gene_involved_in_diseases_layer.tsv")
 

@@ -41,36 +41,27 @@ def process_ppi_file_HUGO(input_file: str, output_file: str, From: str, To: str)
 		convertFrom=From,
 		convertTo=To
 	)
-	df = pd.read_csv(input_file, sep = "\t", header=None)
+	print(mapping_dict)
+	df = pd.read_csv(input_file, sep = "\t", header=0)
 	df = df.reset_index()
 	interactions = []
-	to_write = []
+	count_interactions = 0
 	for index, row in df.iterrows():
-		# get ids of interactants
 		id_1 = row[0]
 		id_2 = row[1]
-		# check if Ensemnl gene ID 1 is in the mapping dict
+		count_interactions += 1
 		if id_1  in mapping_dict:
-			# get gene name of interactant 1
 			name_1 = mapping_dict[id_1]
-			# check if Ensembl gene ID 2 is in the mapping dict
 			if id_2 in mapping_dict:
-				# get gene name of interactant 2
 				name_2 = mapping_dict[id_2]
-				# keep interaction
 				interactions.append((name_1, name_2))
-	# writing of the output file
 	with open(output_file, 'w') as fo:
-		to_write = []
 		for genes in interactions:
-			gene1 = genes[0]
-			gene2 = genes[1]
-			to_write += [str(gene1 + "\t" + gene2)]
-		fo.write("\n".join([line for line in to_write]))
+			fo.write(genes[0] + "\t" + genes[1] + "\n")
 
-process_ppi_file_HUGO(PPI_file_path, output_interaction_file, "Ensembl gene ID", "Approved symbol")
+#process_ppi_file_HUGO(PPI_file_path, output_interaction_file, "Ensembl gene ID", "Approved symbol")
 
-"""with open("PPI_LitBM_HiUnion_APID.tsv", 'r') as fi:
+with open("PPI_LitBM_HiUnion_APID.tsv", 'r') as fi:
 	interactions = []
 	for line in fi:
 		gene1 = line.split("\t")[0].rstrip()
@@ -82,4 +73,4 @@ process_ppi_file_HUGO(PPI_file_path, output_interaction_file, "Ensembl gene ID",
 		else:
 			print(interaction)
 			print(red)
-	print(len(interactions))"""
+	print(len(interactions))
