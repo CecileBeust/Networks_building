@@ -3,7 +3,9 @@
 """
 Created on Wed Jan  11 2023
 
-@author: Cécile
+@authors: 
+- function getMappingDict : Ozan
+- function process_reactome_file_HUGO : Cécile
 
 Processes Reactome Human Protein-Protein interaction file downloaded from
 https://reactome.org/download/current/interactors/reactome.homo_sapiens.interactions.tab-delimited.txt
@@ -14,12 +16,25 @@ https://reactome.org/download/current/interactors/reactome.homo_sapiens.interact
 
 # Import modules
 import pandas as pd
-from networkIDMapping import getMappingDict
 
 # Defined file paths
 mapping_file_path = "ID_mapping_HUGO_11_01_23.txt"
 reactome_file_path = "reactome.homo_sapiens.interactions.tab-delimited.txt"
 output_interaction_file = "reactome_mapped_HUGO_GENE_NAME_190123.tsv"
+
+def getMappingDict(filePath, convertFrom, convertTo):
+	df=pd.read_csv(filePath, sep="\t")
+	df=df[[convertFrom, convertTo]]
+	df=df.dropna(axis=0)
+	if('UniProt ID(supplied by UniProt)' in df.columns):
+		df['UniProt ID(supplied by UniProt)']= df['UniProt ID(supplied by UniProt)'].astype(str)
+		df['UniProt ID(supplied by UniProt)']= df['UniProt ID(supplied by UniProt)'].astype(str)
+	
+	df=df.set_index(convertFrom)
+	
+	mappingDict=df.to_dict()[convertTo]
+	
+	return mappingDict
 
 def process_reactome_file_HUGO(input_file: str, output_file: str, From: str, To: str):
     """Function which takes as input a human protein-protein
