@@ -61,6 +61,7 @@ def process_ppi_file_HUGO(input_file: str, output_file: str, From: str, To: str)
 
 #process_ppi_file_HUGO(PPI_file_path, output_interaction_file, "Ensembl gene ID", "Approved symbol")
 
+"""
 with open("PPI_LitBM_HiUnion_APID.tsv", 'r') as fi:
 	interactions = []
 	for line in fi:
@@ -73,4 +74,4 @@ with open("PPI_LitBM_HiUnion_APID.tsv", 'r') as fi:
 		else:
 			print(interaction)
 			print(red)
-	print(len(interactions))
+	print(len(interactions))"""

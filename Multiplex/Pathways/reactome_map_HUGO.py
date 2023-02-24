@@ -20,7 +20,7 @@ import pandas as pd
 # Defined file paths
 mapping_file_path = "ID_mapping_HUGO_11_01_23.txt"
 reactome_file_path = "reactome.homo_sapiens.interactions.tab-delimited.txt"
-output_interaction_file = "Pathways_reactome.tsv"
+output_interaction_file = "Pathways_reactome_not_cleaned.tsv"
 
 def getMappingDict(filePath, convertFrom, convertTo):
 	df=pd.read_csv(filePath, sep="\t")
@@ -46,6 +46,8 @@ def process_reactome_file_HUGO(input_file: str, output_file: str, From: str, To:
         input_file (str): name of the reactome input file
         output_file (str): desired name of the interactome
         output file
+        From (str) : identifier of symbol that you want to replace by mapping (column from mapping file)
+        To (str) : identifier or symbol that you want to get by mapping (column from mapping file)
     """
     # Get dictionnary for mapping : Uniprot IDs and Ensembl Gene IDs
     # or gene names
@@ -59,24 +61,21 @@ def process_reactome_file_HUGO(input_file: str, output_file: str, From: str, To:
     df = df.reset_index()
     interactions = []
     count_interactions = 0
-    # Iterate over rows and get uniprot and Ensembl IDs 
-    # for the correspondinf interactant
     for index, row in df.iterrows():
         up_id_1 = row['# Interactor 1 uniprot id']
         up_id_2 = row['Interactor 2 uniprot id']
-        if "ChEBI" not in up_id_1 and "ChEBI" not in up_id_2 or "reactome:R-HSA" not in up_id_1 and "reactome:R-HSA" not in up_id_2:
-            count_interactions += 1
-            # If the interactant is prensent in the mapping file
-            if up_id_1[10:] in mapping_dict:
-                # Map the uniprot ID of the interactant 
-                # to get its corresponding ENSG ID
-                ensG1 = mapping_dict[up_id_1[10:]]
-                # Mapping of interactant 2
-                if up_id_2[10:] in mapping_dict:
-                    ensG2 = mapping_dict[up_id_2[10:]]
-                # If we managed to get both ENSG IDs for interactant 1 and 2
+        # If the first interactant is present in the mapping dict
+        if up_id_1[10:] in mapping_dict:
+            # Map the ID of the first interactant 
+            id1 = mapping_dict[up_id_1[10:]]
+            # if the second interactant is prensent in the mapping dict
+            if up_id_2[10:] in mapping_dict:
+                # Map the ID of the second interactant
+                id2 = mapping_dict[up_id_2[10:]]
+                # If we managed to get both both identifiers for interactant 1 and 2
                 # We get an interaction and add it to the interaction list
-                    interactions.append((ensG1, ensG2))
+                count_interactions += 1
+                interactions.append((id1, id2))
     # Writing of the output file
     with open(output_file, 'w') as fo:
         for genes in interactions:
