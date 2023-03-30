@@ -8,7 +8,7 @@
 
 ### Usage
 
-Download Human protein-protein interactions file from Reactome from the link above and run :
+Download Human protein-protein interactions file from Reactome from the link above, check if the filename corresponds from the one written in the scripts, and run :
 
 ```chmod +x generate_pathways_network.sh``` \
 ```bash generate_pathways_network.sh```
