@@ -8,7 +8,7 @@
 ### Usage
 
 1. Run the ```extract_proteins_complexes.R``` script 
-2. Run the ```build_complex_ntw.py``` script (uses the output of the previous script)
+2. Run the ```build_complex_ntw.py``` script (uses the output of the previous script). It will create the ```Complexes_ntw_gene_names.tsv``` file.
 
 ### References
 

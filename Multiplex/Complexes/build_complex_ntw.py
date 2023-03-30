@@ -48,4 +48,4 @@ def build_complex_layer(input_file: str, output_file: str):
         # write interactions in the output file wihtout redundancy
         fo.write("\n".join([interaction for interaction in to_write]))                
                 
-# build_complex_layer("complexes_gene_name.tsv", "Complexes_ntw_gene_names.tsv")
+build_complex_layer("complexes_gene_name.tsv", "Complexes_ntw_gene_names.tsv")
