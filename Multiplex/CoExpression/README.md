@@ -7,7 +7,11 @@
 
 ### Usage
 
-Download the expression file ```rna_tissue_hpa.tsv``` from HPA (link above) and run the script ```coexp_building_WGCNA.R```
+Download the expression file ```rna_tissue_hpa.tsv``` from HPA (link above) and run the script ```coexp_building_WGCNA.R```. 
+
+This will generate a file ```Coexpression_edges.txt```. To keep only the two first columns of this file and store them in a TSV file, run the following bash command :
+ 
+```cut -f1,2 Coexpression_edges.txt | tr -s '[:blank:]' '\t' > Coexpression_network.tsv```
 
 ### References
 
