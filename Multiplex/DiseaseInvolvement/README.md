@@ -1,4 +1,4 @@
-## Disease involvement layer
+## Disease Involvement Network
 
 ### Files
 
@@ -8,3 +8,7 @@
 ### Usage
 
 ```python generate_disease_layer.py```
+
+### References
+
+- Janet Piñero, Juan Manuel Ramírez-Anguita, Josep Saüch-Pitarch, Francesco Ronzano, Emilio Centeno, Ferran Sanz, Laura I Furlong, The DisGeNET knowledge platform for disease genomics: 2019 update, Nucleic Acids Research, Volume 48, Issue D1, 08 January 2020, Pages D845–D855, https://doi.org/10.1093/nar/gkz1021

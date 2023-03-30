@@ -1,4 +1,4 @@
-## Protein-protein (PPI) layer
+## Protein-Protein Interaction (PPI) Network
 
 ### Files
 
@@ -21,3 +21,10 @@ Then do :
 
 
 ```bash process_PPI.sh```
+
+### References
+
+- Luck, K., Kim, DK., Lambourne, L. et al. A reference map of the human binary protein interactome. Nature 580, 402?408 (2020). https://doi.org/10.1038/s41586-020-2188-x
+- Diego Alonso-López, Francisco J Campos-Laborie, Miguel A Gutiérrez, Luke Lambourne, Michael A Calderwood, Marc Vidal, Javier De Las Rivas, APID database: redefining protein–protein interaction experimental evidences and binary interactomes, Database, Volume 2019, 2019, baz005, https://doi.org/10.1093/database/baz005
+- Ruth L Seal, Bryony Braschi, Kristian Gray, Tamsin E M Jones, Susan Tweedie, Liora Haim-Vilmovsky, Elspeth A Bruford, Genenames.org: the HGNC resources in 2023, Nucleic Acids Research, Volume 51, Issue D1, 6 January 2023, Pages D1003–D1009, https://doi.org/10.1093/nar/gkac888
+

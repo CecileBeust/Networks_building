@@ -1,4 +1,4 @@
-## Pathways layer
+## Pathways Network
 
 ### Files
 
@@ -12,3 +12,8 @@ Download Human protein-protein interactions file from Reactome from the link abo
 
 ```chmod +x generate_pathways_network.sh``` \
 ```bash generate_pathways_network.sh```
+
+### References
+
+- Marc Gillespie, Bijay Jassal, Ralf Stephan, Marija Milacic, Karen Rothfels, Andrea Senff-Ribeiro, Johannes Griss, Cristoffer Sevilla, Lisa Matthews, Chuqiao Gong, Chuan Deng, Thawfeek Varusai, Eliot Ragueneau, Yusra Haider, Bruce May, Veronica Shamovsky, Joel Weiser, Timothy Brunson, Nasim Sanati, Liam Beckman, Xiang Shao, Antonio Fabregat, Konstantinos Sidiropoulos, Julieth Murillo, Guilherme Viteri, Justin Cook, Solomon Shorser, Gary Bader, Emek Demir, Chris Sander, Robin Haw, Guanming Wu, Lincoln Stein, Henning Hermjakob, Peter D’Eustachio, The reactome pathway knowledgebase 2022, Nucleic Acids Research, 2021;, gkab1028, https://doi.org/10.1093/nar/gkab1028
+- Ruth L Seal, Bryony Braschi, Kristian Gray, Tamsin E M Jones, Susan Tweedie, Liora Haim-Vilmovsky, Elspeth A Bruford, Genenames.org: the HGNC resources in 2023, Nucleic Acids Research, Volume 51, Issue D1, 6 January 2023, Pages D1003–D1009, https://doi.org/10.1093/nar/gkac888
