@@ -1,15 +1,15 @@
-## Co-expression layer
-
 ### Files
 
-* ```coexp_building_WGCNA.R``` : R script allowing to build a co-expression network from expression data file using the WGCNA (Weighted Gene Coexpression Network Analysis) method. 
-* ```rna_tissue_hpa.tsv```: expression data downloaded from the Human Protein Atlas (RNA HPA tissue gene data : https://www.proteinatlas.org/about/download). Data correspond to transcript expression levels summarized per gene in 256 tissues based on RNA-seq.
+* ```coexp_building_WGCNA.R``` : R script allowing to build a co-expression network from expression data of the Human Proteine Atlas using the WGCNA (Weighted Gene Coexpression Network Analysis) method
 
 ### Usage
 
-Download the expression file ```rna_tissue_hpa.tsv``` from HPA (link above) and run the script ```coexp_building_WGCNA.R```. 
+- Download the expression file ```rna_tissue_hpa.tsv``` from HPA (RNA HPA tissue gene data : https://www.proteinatlas.org/about/download) : this dataset corresponds to transcript expression levels summarized per gene in 256 tissues based on RNA-seq.
+- 8 of the  gene identifiers in the file are retired, you can create a copy of the data without these IDs using the following bash command : 
 
-This will generate a file ```Coexpression_edges.tsv```.
+```grep -vwE "(ENSG00000182584|ENSG00000287542|ENSG00000280987|ENSG00000284741|ENSG00000258724|ENSG00000285437|ENSG00000285053|ENSG00000269226)" rna_tissue_hpa_250123.tsv > rna_tissue_hpa_250123_WOBadIDs.tsv```
+
+- Run the script ```coexp_building_WGCNA.R```. This will generate the coexpression network (file ```Coexpression_edges.tsv```).## Co-expression layer
 
 ### References
 
