@@ -122,7 +122,7 @@ TOM[c(1:5), c(1:5)]
 
 # export network for visualization with Cytoscape
 cyt <- exportNetworkToCytoscape(TOM,
-                                edgeFile = "Coexpression_edges.txt",
+                                edgeFile = "Coexpression_edges.tsv",
                                 weighted = TRUE,
                                 threshold = 0.5,
                                 nodeNames = colnames(dataExpr0))
