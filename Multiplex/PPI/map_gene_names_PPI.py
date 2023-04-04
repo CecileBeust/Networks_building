@@ -59,19 +59,6 @@ def process_ppi_file_HUGO(input_file: str, output_file: str, From: str, To: str)
 		for genes in interactions:
 			fo.write(genes[0] + "\t" + genes[1] + "\n")
 
-#process_ppi_file_HUGO(PPI_file_path, output_interaction_file, "Ensembl gene ID", "Approved symbol")
+process_ppi_file_HUGO(PPI_file_path, output_interaction_file, "Ensembl gene ID", "Approved symbol")
 
-"""
-with open("PPI_LitBM_HiUnion_APID.tsv", 'r') as fi:
-	interactions = []
-	for line in fi:
-		gene1 = line.split("\t")[0].rstrip()
-		gene2 = line.split("\t")[1].rstrip()
-		interaction = (gene1, gene2)
-		red = (gene2, gene1)
-		if not interaction in interactions and not red in interactions:
-			interactions.append(interaction)
-		else:
-			print(interaction)
-			print(red)
-	print(len(interactions))"""
+

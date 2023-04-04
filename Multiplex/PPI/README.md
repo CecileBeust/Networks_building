@@ -22,6 +22,8 @@ Then do :
 
 ```bash process_PPI.sh```
 
+This will generate the PPI network file PPI_LitBM_HiUnion_APID.tsv
+
 ### References
 
 - Luck, K., Kim, DK., Lambourne, L. et al. A reference map of the human binary protein interactome. Nature 580, 402?408 (2020). https://doi.org/10.1038/s41586-020-2188-x

@@ -16,7 +16,7 @@ sort PPI_LitBM_HiUnion_APID_not_cleaned.tsv | uniq > PPI_LitBM_HiUnion_APID_wo_d
 # run utilities.py to remove rendundant interactions
 python3 utilities.py -i PPI_LitBM_HiUnion_APID_wo_dups.tsv -o PPI_LitBM_HiUnion_APID.tsv
 
-# Remove intermediate files
+# Uncomment these lines if you want to remove intermediate files
 # rm PPI_LitBM_HiUnion.tsv
 # rm PPI_LitBM_HiUnion_APID_not_cleaned.tsv
 # rm PPI_LitBM_HiUnion_APID_wo_dups.tsv
