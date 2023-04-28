@@ -12,7 +12,7 @@ This network is built using gene-disease associations from DisGeNET version 2021
 
 ```python generate_disease_layer.py```
 
-This will generate the network file Gene_involved_in_diseases_layer.tsv
+This will generate the network file ```Gene_involved_in_diseases_layer.tsv```
 
 ### References
 

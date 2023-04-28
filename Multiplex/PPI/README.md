@@ -22,7 +22,7 @@ Then do :
 
 ```bash process_PPI.sh```
 
-This will generate the PPI network file PPI_LitBM_HiUnion_APID.tsv
+This will generate the PPI network file ```PPI_LitBM_HiUnion_APID.tsv```
 
 ### References
 
