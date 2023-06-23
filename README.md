@@ -13,4 +13,6 @@ The ```Multiplex``` folder contains specific folders and files to build a biolog
 
 - Disease involvement : Associations of genes based on their involvement in the same diseases (source : Gene-disease associations from DisGeNet, version 2021)
 
+The ```NetworkAnalysis.py``` script allows to get some statistics about the networks (number of nodes, edges and densities)
+
 These networks, as well as additional information like the associated rights, are also available on NDEx: https://www.ndexbio.org/index.html#/search?searchType=All&searchString=cecile.beust&searchTermExpansion=false
