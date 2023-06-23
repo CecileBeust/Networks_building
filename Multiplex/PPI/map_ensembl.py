@@ -38,7 +38,7 @@ fileout = args.output
 
 
 # Define file names
-mapping_file_path = "data/ID_mapping_HUGO_11_01_23.txt"
+mapping_file_path = "ID_mapping_HUGO_11_01_23.txt"
 PPI_file_path = filein
 print(PPI_file_path)
 output_interaction_file = fileout

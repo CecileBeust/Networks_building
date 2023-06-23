@@ -8,8 +8,8 @@ cat data/Hi-union-090123.tsv >> network_output/PPI_V1.tsv
 python3 map_ensembl.py -i network_output/PPI_V1.tsv -o network_output/PPI_V1_mapped.tsv
 
 # Map APID
-tail -n +2 data/APID_level2_homo_sapiens_170123.txt | cut -f2,5 > data/APID_interactions.txt
-python3 map_uniprot.py -i data/APID_interactions.txt -o data/APID_interactions_mapped.txt
+tail -n +2 data/APID_level2_homo_sapiens_170123.txt | cut -f2,5 > data/APID_interactions_uniprot.txt
+python3 map_uniprot.py -i data/APID_interactions_uniprot.txt -o data/APID_interactions_mapped.txt
 
 # Add APID gene names to the file
 cat data/APID_interactions_mapped.txt >> network_output/PPI_V1_mapped.tsv
