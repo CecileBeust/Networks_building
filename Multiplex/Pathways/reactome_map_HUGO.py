@@ -19,8 +19,8 @@ import pandas as pd
 
 # Defined file paths
 mapping_file_path = "ID_mapping_HUGO_11_01_23.txt"
-reactome_file_path = "reactome.homo_sapiens.interactions.tab-delimited.txt"
-output_interaction_file = "Pathways_reactome_not_cleaned.tsv"
+reactome_file_path = "data/reactome.homo_sapiens.interactions.tab-delimited.txt"
+output_interaction_file = "network_output/Pathways_reactome_not_cleaned.tsv"
 
 def getMappingDict(filePath, convertFrom, convertTo):
 	df=pd.read_csv(filePath, sep="\t")

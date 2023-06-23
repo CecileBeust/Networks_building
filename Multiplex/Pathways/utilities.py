@@ -56,5 +56,6 @@ def clean_network(input: str, output: str):
             gene2 = genes[1]
             to_write += [str(gene1 + "\t" + gene2)]
         fo.write("\n".join([line for line in to_write]))
+        fo.write("\n")
          
 clean_network(filein, fileout)
