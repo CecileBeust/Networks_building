@@ -13,6 +13,7 @@
 To build the PPI network you can download the following updated datadase files :
 - Lit-BM and Hi-Union from HuRI : http://www.interactome-atlas.org/download 
 - APID level 2 homo sapiens wihtout inter-species interactions : http://cicblade.dep.usal.es:8080/APID/init.action. Rename this file ```APID_level2_homo_sapiens.txt```.
+In this case you will have to rename the names of the files in the ```process_PPI.sh``` script.
 
 A version of these databases files downloaded in January 2023 is provided in the ```data``` folder
 
